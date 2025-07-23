@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>عبدالرحمن بيحب زهراء</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Tahoma', sans-serif;
+            background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+            color: #333;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            background: #ff6ec7;
+            color: white;
+            font-size: 28px;
+        }
+        section {
+            padding: 40px 20px;
+        }
+        button {
+            padding: 20px 40px;
+            font-size: 22px;
+            background-color: #ff6ec7;
+            border: none;
+            border-radius: 15px;
+            color: white;
+            cursor: pointer;
+            margin: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.2s, background 0.3s;
+        }
+        button:hover {
+            background-color: #ff3ba7;
+            transform: scale(1.1);
+        }
+        .message-box {
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            width: 60%;
+            font-size: 20px;
+        }
+        .gallery img {
+            width: 150px;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.2);
+        }
+        footer {
+            padding: 10px;
+            background: #ff6ec7;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        عبدالرحمن بيحب زهراء 💖
+    </header>
+
+    <section>
+        <h2>جرب حظك واضغط الزر</h2>
+        <button onclick="showMessage()">اضغط هنا</button>
+        <div class="message-box" id="messageBox">اضغط على الزر عشان تعرف الرسالة!</div>
+    </section>
+
+    <section class="gallery">
+        <h2>ألبوم الحب</h2>
+        <img src="https://placekitten.com/200/200" alt="صورة 1">
+        <img src="https://placekitten.com/201/200" alt="صورة 2">
+        <img src="https://placekitten.com/200/201" alt="صورة 3">
+    </section>
+
+    <section>
+        <h2>اقتباسات حب</h2>
+        <p>«الحب هو أن ترى النصف الآخر من روحك في عينين مختلفتين.»</p>
+        <p>«عبدالرحمن + زهراء = إلى الأبد.»</p>
+    </section>
+
+    <section>
+        <h2>عداد الحب</h2>
+        <p id="counter">0</p>
+        <button onclick="increaseCounter()">زود الحب</button>
+    </section>
+
+    <footer>
+        &copy; 2025 - موقع عبدالرحمن وزهراء 💕
+    </footer>
+
+    <script>
+        const messages = [
+            "عبدالرحمن بيحب زهراء 💖",
+            "أحلى حب في الدنيا ❤️",
+            "سيب القلوب تعشق 🌹",
+            "حب خالد ما بيموتش 💕",
+            "زهراء نجمة عبدالرحمن ✨",
+            "الحب الحقيقي هنا 💞",
+            "أنتوا أحلى ثنائي 😍",
+            "عبدالرحمن وزهراء = ❤",
+            "القلب دق لزهراء فقط 💓",
+            "الحب انتعش النهارده 🌸"
+        ];
+
+        function showMessage() {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById("messageBox").innerText = messages[randomIndex];
+        }
+
+        let counter = 0;
+        function increaseCounter() {
+            counter++;
+            document.getElementById("counter").innerText = counter;
+        }
+    </script>
+</body>
+</html>
